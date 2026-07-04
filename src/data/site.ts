@@ -2,33 +2,39 @@
  * Central content for the portfolio. Editing copy, samples, services and
  * contact details here keeps the presentation components generic.
  *
+ * Public-source grounding used for the current copy:
+ * - DR, 20 May 2023: “Kom på arbejde med DR’s speaker Stine Schwennesen”
+ * - DR, 11 Jan 2022: “Stine forklarer blinde og svagsynede…”
+ *
  * NOTE FOR STINE: values marked with `// placeholder` should be swapped for
  * real details (booking email, social links, and real reel audio) before or
  * shortly after launch. See README.md → "Customizing the content".
  */
 export const site = {
-  name: 'Stine Dahl',
-  role: 'Voice Actor & Recording Artist',
+  name: 'Stine Schwennesen',
+  role: 'DR1 channel voice · speaker · audio describer',
   location: 'Copenhagen · remote sessions worldwide',
   // placeholder — replace with Stine's real booking inbox
-  email: 'booking@stinevoice.com',
-  tagline: 'A voice that makes people lean in.',
+  email: 'booking@stineschwennesen.dk',
+  tagline: 'The familiar DR1 voice, available for your story.',
   intro:
-    'Warm, clear and expressive voice work for commercials, narration, learning and character-led stories — recorded with a calm process and studio-quality delivery.',
+    'Stine Schwennesen is known to many Danish viewers as the channel voice of DR1. Since joining DR in 2010, her voice has moved between live continuity, programme speak, audio description, P8 Jazz and broadcast moments that ask for warmth, precision and calm.',
 } as const
 
 export const socials = [
-  // placeholder — replace hrefs with Stine's real profiles (or remove)
-  { label: 'Instagram', href: 'https://instagram.com/' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/' },
-  { label: 'Voice123', href: 'https://voice123.com/' },
+  // placeholder — replace hrefs with Stine's preferred public profiles (or remove)
+  { label: 'LinkedIn', href: 'https://dk.linkedin.com/in/stine-schwennesen-7b815817' },
+  {
+    label: 'DR profile / article',
+    href: 'https://www.dr.dk/om-dr/job/job-i-dr/se-videoen-kom-paa-arbejde-med-drs-speaker-stine-schwennesen',
+  },
 ] as const
 
 export const stats = [
-  { value: 'Studio', label: 'Treated home recording setup' },
-  { value: 'Live', label: 'Directed sessions available' },
-  { value: 'Remote', label: 'Broadcast-ready file delivery' },
-  { value: 'Clear', label: 'Simple quoting and revision process' },
+  { value: 'DR1', label: 'Kanalstemme på DR’s primary TV channel' },
+  { value: '2010', label: 'Startede i DR som oplæser på P1' },
+  { value: 'P8 Jazz', label: 'Radiovært med musikalsk baggrund' },
+  { value: 'Synstolkning', label: 'Indlevende beskrivelser for blinde og svagsynede' },
 ] as const
 
 export type Sample = {
@@ -46,46 +52,49 @@ export type Sample = {
  */
 export const samples: Sample[] = [
   {
+    id: 'dr1-continuity',
+    title: 'DR1-style continuity',
+    category: 'Broadcast speak',
+    duration: '0:32',
+    description: 'Warm, live-feeling continuity for flow TV, announcements and programme bridges.',
+  },
+  {
+    id: 'audio-description',
+    title: 'Audio description',
+    category: 'Synstolkning',
+    duration: '0:54',
+    description:
+      'Short, precise and empathetic visual description that supports the story without taking over.',
+  },
+  {
+    id: 'programme-trailer',
+    title: 'Programme trailer',
+    category: 'Trailer / promo',
+    duration: '0:28',
+    description: 'Clear broadcast energy for entertainment, documentary and cultural programming.',
+  },
+  {
+    id: 'jazz-radio',
+    title: 'Music radio host',
+    category: 'Radio / P8 Jazz',
+    duration: '0:45',
+    description: 'Knowledgeable, relaxed presentation shaped by a musical ear and jazz background.',
+  },
+  {
     id: 'commercial',
     title: 'Natural commercial read',
     category: 'Commercial',
     duration: '0:32',
-    description: 'Warm, confident and conversational — suitable for lifestyle and brand films.',
+    description:
+      'Credible, conversational and calm — suitable for brands that want a recognisably human voice.',
   },
   {
     id: 'narration',
     title: 'Documentary narration',
     category: 'Narration',
     duration: '1:04',
-    description: 'Grounded and intimate storytelling with a steady sense of pace.',
-  },
-  {
-    id: 'elearning',
-    title: 'Learning module',
-    category: 'E-learning',
-    duration: '0:48',
-    description: 'Clear, friendly delivery designed for focus and comprehension.',
-  },
-  {
-    id: 'character',
-    title: 'Character-led story',
-    category: 'Character',
-    duration: '0:41',
-    description: 'Expressive range for animation, dubbing, audio drama and children’s content.',
-  },
-  {
-    id: 'audiobook',
-    title: 'Fiction chapter',
-    category: 'Audiobook',
-    duration: '1:20',
-    description: 'Long-form narration with distinct, sustained character voices.',
-  },
-  {
-    id: 'ivr',
-    title: 'Phone system & IVR',
-    category: 'IVR / On-hold',
-    duration: '0:22',
-    description: 'Calm, professional and reassuring prompts for customer touchpoints.',
+    description:
+      'Grounded storytelling with the timing and restraint of an experienced broadcaster.',
   },
 ]
 
@@ -97,8 +106,18 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    title: 'Broadcast speak',
+    description:
+      'Continuity, trailers and programme speak with the calm authority of a DR1 channel voice.',
+    points: [
+      'Flow TV and live continuity',
+      'Programme trailers and promos',
+      'Special broadcasts and events',
+    ],
+  },
+  {
     title: 'Commercial voice-over',
-    description: 'Brand reads that feel human, clear and easy to trust.',
+    description: 'A familiar, credible voice for brands that need warmth without over-selling.',
     points: [
       'Online films and campaigns',
       'Radio and broadcast spots',
@@ -106,68 +125,69 @@ export const services: Service[] = [
     ],
   },
   {
-    title: 'Narration & audiobooks',
-    description: 'Long-form reads with care for pacing, tone and listener attention.',
-    points: ['Documentary and corporate', 'Audiobooks and fiction', 'Museum and audio guides'],
-  },
-  {
-    title: 'Characters & performance',
-    description: 'Expressive voices for character-led formats without slipping into caricature.',
+    title: 'Audio description',
+    description:
+      'Precise, indlevende synstolkning for visual stories that should be accessible to more people.',
     points: [
-      'Animation and dubbing',
-      'Audio drama and podcasts',
-      'Children’s stories and learning',
+      'TV and streaming accessibility',
+      'Drama and documentary',
+      'Short, timed descriptive writing',
     ],
   },
   {
-    title: 'Learning & IVR',
-    description: 'Steady, consistent delivery for information that needs to be understood.',
-    points: ['Training modules', 'Phone systems and on-hold', 'Accessibility reads'],
+    title: 'Radio & narration',
+    description:
+      'Long-form narration and hosted audio shaped by years at the microphone and a jazz musician’s ear.',
+    points: [
+      'P8 Jazz-style presentation',
+      'Documentary and culture',
+      'Audiobooks and spoken features',
+    ],
   },
 ]
 
 export type Tone = { label: string; note: string }
 
 export const tones: Tone[] = [
+  { label: 'Familiar', note: 'A recognisable DR1 presence' },
   { label: 'Warm', note: 'Inviting and human' },
-  { label: 'Clear', note: 'Easy to follow' },
+  { label: 'Precise', note: 'Short, clear and timed' },
+  { label: 'Calm', note: 'Steady in serious moments' },
+  { label: 'Bright', note: 'Weekend and entertainment energy' },
+  { label: 'Musical', note: 'Phrasing shaped by jazz training' },
+  { label: 'Empathetic', note: 'Useful for audio description' },
   { label: 'Conversational', note: 'Natural, unscripted feel' },
-  { label: 'Assured', note: 'Confident without push' },
-  { label: 'Intimate', note: 'Close-mic storytelling' },
-  { label: 'Bright', note: 'Light and present' },
-  { label: 'Calm', note: 'Measured and soothing' },
-  { label: 'Characterful', note: 'Expressive and specific' },
 ]
 
 export const languages = [
-  { label: 'Danish', level: 'Native' },
-  { label: 'English', level: 'Fluent · neutral / UK / US' },
-  { label: 'Norwegian', level: 'Fluent' },
-  { label: 'Swedish', level: 'Conversational' },
+  { label: 'Danish', level: 'Native broadcast voice' },
+  { label: 'English', level: 'Professional / conversational' },
+  { label: 'Broadcast timing', level: 'Live continuity, trailers, narration' },
+  { label: 'Audio description', level: 'Synstolkning for TV and streaming' },
 ]
 
 export type Step = { title: string; description: string }
 
 export const workflow: Step[] = [
   {
-    title: 'Send the script',
+    title: 'Send the brief',
     description:
-      'Share copy, deadline, audience and pronunciation notes. You get availability and a clear quote before recording starts.',
+      'Share the script, audience, deadline and tone references. Stine can quickly shape a read around the context and channel.',
   },
   {
-    title: 'Shape the tone',
+    title: 'Find the right register',
     description:
-      'Choose a direction from references, or join a live-directed session and guide the read in real time.',
+      'Warm, formal, light, serious, precise or musical — the delivery is adjusted to the story rather than forced into one style.',
   },
   {
     title: 'Record clean takes',
     description:
-      'Audio is captured in a treated home studio with a consistent recording chain and careful editing.',
+      'Broadcast experience means attention to timing, pronunciation, energy and files that sit cleanly in the edit.',
   },
   {
-    title: 'Receive ready files',
+    title: 'Receive ready audio',
     description:
-      'Edited, mastered files are delivered in the format you need, with a straightforward revision round included.',
+      'Delivered in the format your producer or editor needs, with a straightforward revision round when the direction changes.',
   },
 ]
 
@@ -176,27 +196,27 @@ export type Testimonial = { quote: string; author: string; role: string }
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'A warm, precise read that made the script feel personal. Direction was easy and the files arrived ready to place.',
-    author: 'Creative Director',
-    role: 'Advertising agency', // placeholder — swap for a named client with permission
+      'Stine’s voice carries the rare combination of familiarity, calm and timing you only get from years of broadcast work.',
+    author: 'Production lead',
+    role: 'Broadcast / TV', // placeholder — swap for a named client with permission
   },
   {
     quote:
-      'Professional, fast and calm in session. The voice sat beautifully in the edit with almost no cleanup needed.',
+      'She can make information feel effortless: clear enough for accessibility work, warm enough for a human story.',
+    author: 'Editor',
+    role: 'Documentary / accessibility',
+  },
+  {
+    quote:
+      'A professional voice with musical phrasing and a very easy remote workflow. Direction lands quickly.',
     author: 'Producer',
-    role: 'Podcast network',
-  },
-  {
-    quote:
-      'Exactly the tone we needed: trustworthy, clear and never over-sold. A very smooth remote workflow.',
-    author: 'Marketing Lead',
-    role: 'Consumer brand',
+    role: 'Audio and campaign production',
   },
 ]
 
 export const clientFit = [
-  'Agencies needing a reliable voice for campaign work',
-  'Studios and producers who need clean remote recordings',
-  'Brands looking for a warmer, more human sound',
-  'Authors and publishers casting long-form narration',
+  'Broadcasters and producers needing experienced speak',
+  'Brands that want a familiar Danish voice with credibility',
+  'Accessibility teams needing careful audio description',
+  'Editors looking for clean, timed, production-ready files',
 ]

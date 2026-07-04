@@ -7,7 +7,7 @@ export function About() {
       <div className="about__grid">
         <div className="about__portrait" aria-hidden="true">
           <div className="about__portrait-inner">
-            <span className="about__initials">SD</span>
+            <span className="about__initials">SS</span>
             <span className="about__waves" />
           </div>
         </div>
@@ -15,18 +15,19 @@ export function About() {
         <div className="about__body">
           <SectionHeading kicker="About" title="Hi, I&rsquo;m Stine" id="about-title" />
           <p>
-            I&rsquo;ve spent over a decade helping brands, studios and storytellers find their voice
-            — quite literally. What started as a love of radio drama became a full-time craft:
-            reading, performing and shaping audio that people actually want to listen to.
+            Stine Schwennesen is a Danish broadcast speaker and voice artist best known as a
+            familiar channel voice on DR1. DR describes her work as spanning everything from warm
+            weekend and holiday continuity to special broadcasts and serious news moments.
           </p>
           <p>
-            Clients come back because I&rsquo;m easy to work with, quick to turn things around, and
-            genuinely care about the result. I treat every script — a six-second bumper or a
-            twelve-hour audiobook — like it matters, because to someone it does.
+            Her DR path began in 2010 as an oplæser on P1, followed by live speak on DR2 before she
+            found her home on DR1. Alongside the TV work, she has hosted on P8 Jazz — a natural fit
+            for a voice performer originally trained as a jazz singer.
           </p>
           <p>
-            When I&rsquo;m not in the booth, you&rsquo;ll find me coaching new voice talent, walking
-            by the harbour, or chasing the perfect cup of coffee.
+            Stine also works with synstolkning, audio description for blind and visually impaired
+            viewers. That work asks for exactly the same qualities producers need in a voice:
+            timing, precision, empathy and the ability to say a lot with very few words.
           </p>
 
           <dl className="about__facts">

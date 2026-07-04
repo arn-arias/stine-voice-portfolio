@@ -29,8 +29,8 @@ export function Contact() {
         </div>
 
         <p className="contact__meta">
-          <Clock aria-hidden="true" /> Replies within one business day · Typical delivery in 24
-          hours
+          <Clock aria-hidden="true" /> Share format, usage, deadline and tone direction for the
+          fastest reply.
         </p>
       </div>
     </section>
