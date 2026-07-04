@@ -10,8 +10,10 @@ describe('App', () => {
   it('renders the hero with the tagline and booking calls to action', () => {
     render(<App />)
 
-    expect(screen.getAllByText(/Stine Schwennesen/i).length).toBeGreaterThan(0)
-    expect(screen.getByRole('heading', { level: 1, name: /DR1 voice/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { level: 1, name: /Stine Schwennesen/i }),
+    ).toBeInTheDocument()
+    expect(screen.getByText(/familiar DR1 voice/i)).toBeInTheDocument()
     // The hero + contact both link to the email, the header links to #contact.
     const bookLinks = screen.getAllByRole('link', { name: /book/i })
     expect(bookLinks.length).toBeGreaterThan(0)

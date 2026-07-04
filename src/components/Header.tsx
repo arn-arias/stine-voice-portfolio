@@ -4,11 +4,11 @@ import { Menu, X } from 'lucide-react'
 import { site } from '../data/site'
 
 const links = [
-  { href: '#reel', label: 'Reel' },
-  { href: '#services', label: 'Services' },
-  { href: '#range', label: 'Range' },
-  { href: '#workflow', label: 'Workflow' },
-  { href: '#about', label: 'About' },
+  { href: '#reel', label: 'Voice directions' },
+  { href: '#services', label: 'Work' },
+  { href: '#range', label: 'Register' },
+  { href: '#workflow', label: 'Process' },
+  { href: '#about', label: 'DR profile' },
 ]
 
 export function Header() {
@@ -40,7 +40,7 @@ export function Header() {
         </nav>
 
         <a className="btn btn--sm btn--primary nav__cta" href="#contact">
-          Book Stine
+          Enquire
         </a>
 
         <button
@@ -67,7 +67,7 @@ export function Header() {
             ))}
             <li>
               <a className="btn btn--primary" href="#contact" onClick={() => setOpen(false)}>
-                Book Stine
+                Enquire
               </a>
             </li>
           </ul>

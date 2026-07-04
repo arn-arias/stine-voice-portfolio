@@ -9,12 +9,13 @@ export function Hero() {
       <div className="hero__inner">
         <p className="hero__eyebrow">
           <span className="hero__dot" aria-hidden="true" />
-          {site.role} · Available for bookings
+          {site.role} · available for selected projects
         </p>
 
         <h1 id="page-title" className="hero__title">
-          {site.tagline}
+          {site.name}
         </h1>
+        <p className="hero__tagline">{site.tagline}</p>
 
         <p className="hero__lead">{site.intro}</p>
 
@@ -23,7 +24,7 @@ export function Hero() {
             Book a session <ArrowRight aria-hidden="true" />
           </a>
           <a className="btn btn--ghost btn--lg" href="#reel">
-            <PlayCircle aria-hidden="true" /> Listen to the reel
+            <PlayCircle aria-hidden="true" /> Listen to voice directions
           </a>
         </div>
 
@@ -31,7 +32,7 @@ export function Hero() {
           <MapPin aria-hidden="true" /> {site.location}
         </p>
 
-        <dl className="hero__stats">
+        <dl className="hero__stats" aria-label="Broadcast profile highlights">
           {stats.map((s) => (
             <div key={s.label} className="hero__stat">
               <dt className="hero__stat-value">{s.value}</dt>

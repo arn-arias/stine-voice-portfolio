@@ -16,9 +16,9 @@ export const site = {
   location: 'Copenhagen · remote sessions worldwide',
   // placeholder — replace with Stine's real booking inbox
   email: 'booking@stineschwennesen.dk',
-  tagline: 'The familiar DR1 voice, available for your story.',
+  tagline: 'The familiar DR1 voice behind programme flow, audio description and musical radio.',
   intro:
-    'Stine Schwennesen is known to many Danish viewers as the channel voice of DR1. Since joining DR in 2010, her voice has moved between live continuity, programme speak, audio description, P8 Jazz and broadcast moments that ask for warmth, precision and calm.',
+    'Stine Schwennesen is known to many Danish viewers as the channel voice of DR1. Since joining DR in 2010, her voice has moved between live continuity, programme speak, synstolkning, P8 Jazz and broadcast moments that ask for warmth, precision and calm.',
 } as const
 
 export const socials = [
@@ -196,21 +196,21 @@ export type Testimonial = { quote: string; author: string; role: string }
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'Stine’s voice carries the rare combination of familiarity, calm and timing you only get from years of broadcast work.',
-    author: 'Production lead',
-    role: 'Broadcast / TV', // placeholder — swap for a named client with permission
+      'DR describes Stine Schwennesen as DR1’s kanalstemme — the voice many viewers recognise as the sound of DR1.',
+    author: 'DR / Job i DR',
+    role: 'Published 20 May 2023',
   },
   {
     quote:
-      'She can make information feel effortless: clear enough for accessibility work, warm enough for a human story.',
-    author: 'Editor',
-    role: 'Documentary / accessibility',
+      'Her DR path began in 2010 as oplæser on P1, continued with live speak on DR2, and later settled into DR1.',
+    author: 'DR / Job i DR',
+    role: 'Career background',
   },
   {
     quote:
-      'A professional voice with musical phrasing and a very easy remote workflow. Direction lands quickly.',
-    author: 'Producer',
-    role: 'Audio and campaign production',
+      'Alongside speaker work, DR presents her as a synstolker and explains how she describes visual action for blind and visually impaired viewers.',
+    author: 'DR / Nyt fra DR',
+    role: 'Published 11 Jan 2022',
   },
 ]
 
