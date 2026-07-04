@@ -6,16 +6,15 @@
  * real details (booking email, social links, and real reel audio) before or
  * shortly after launch. See README.md → "Customizing the content".
  */
-
 export const site = {
   name: 'Stine Dahl',
   role: 'Voice Actor & Recording Artist',
-  location: 'Copenhagen · Working worldwide, remote',
+  location: 'Copenhagen · remote sessions worldwide',
   // placeholder — replace with Stine's real booking inbox
   email: 'booking@stinevoice.com',
   tagline: 'A voice that makes people lean in.',
   intro:
-    'Warm, characterful and precise — I bring scripts to life for brands, studios and storytellers. From a 15-second spot to a full audiobook, I deliver broadcast-ready recordings from my treated home studio, wherever you are.',
+    'Warm, clear and expressive voice work for commercials, narration, learning and character-led stories — recorded with a calm process and studio-quality delivery.',
 } as const
 
 export const socials = [
@@ -26,10 +25,10 @@ export const socials = [
 ] as const
 
 export const stats = [
-  { value: '12+', label: 'Years behind the mic' },
-  { value: '600+', label: 'Projects delivered' },
-  { value: '4', label: 'Languages, native & fluent' },
-  { value: '24h', label: 'Typical turnaround' },
+  { value: 'Studio', label: 'Treated home recording setup' },
+  { value: 'Live', label: 'Directed sessions available' },
+  { value: 'Remote', label: 'Broadcast-ready file delivery' },
+  { value: 'Clear', label: 'Simple quoting and revision process' },
 ] as const
 
 export type Sample = {
@@ -48,35 +47,35 @@ export type Sample = {
 export const samples: Sample[] = [
   {
     id: 'commercial',
-    title: 'National broadcast spot',
+    title: 'Natural commercial read',
     category: 'Commercial',
     duration: '0:32',
-    description: 'Bright, confident and inviting — a lifestyle brand campaign read.',
+    description: 'Warm, confident and conversational — suitable for lifestyle and brand films.',
   },
   {
     id: 'narration',
     title: 'Documentary narration',
     category: 'Narration',
     duration: '1:04',
-    description: 'Grounded and intimate storytelling for a nature series.',
+    description: 'Grounded and intimate storytelling with a steady sense of pace.',
   },
   {
     id: 'elearning',
-    title: 'Corporate e-learning',
+    title: 'Learning module',
     category: 'E-learning',
     duration: '0:48',
-    description: 'Clear, friendly and easy to follow across a training module.',
+    description: 'Clear, friendly delivery designed for focus and comprehension.',
   },
   {
     id: 'character',
-    title: 'Animated character reel',
+    title: 'Character-led story',
     category: 'Character',
     duration: '0:41',
-    description: 'Playful range — from mischievous sidekick to gentle mentor.',
+    description: 'Expressive range for animation, dubbing, audio drama and children’s content.',
   },
   {
     id: 'audiobook',
-    title: 'Literary fiction chapter',
+    title: 'Fiction chapter',
     category: 'Audiobook',
     duration: '1:20',
     description: 'Long-form narration with distinct, sustained character voices.',
@@ -86,7 +85,7 @@ export const samples: Sample[] = [
     title: 'Phone system & IVR',
     category: 'IVR / On-hold',
     duration: '0:22',
-    description: 'Calm, professional and reassuring brand-aligned prompts.',
+    description: 'Calm, professional and reassuring prompts for customer touchpoints.',
   },
 ]
 
@@ -99,23 +98,31 @@ export type Service = {
 export const services: Service[] = [
   {
     title: 'Commercial voice-over',
-    description: 'TV, radio, and online spots that sell without shouting.',
-    points: ['Broadcast & digital ads', 'Brand & explainer videos', 'Social campaigns'],
+    description: 'Brand reads that feel human, clear and easy to trust.',
+    points: [
+      'Online films and campaigns',
+      'Radio and broadcast spots',
+      'Explainers and product stories',
+    ],
   },
   {
     title: 'Narration & audiobooks',
-    description: 'Long-form reads that keep listeners with you to the last line.',
-    points: ['Documentary & corporate', 'Audiobooks & fiction', 'Museum & audio guides'],
+    description: 'Long-form reads with care for pacing, tone and listener attention.',
+    points: ['Documentary and corporate', 'Audiobooks and fiction', 'Museum and audio guides'],
   },
   {
-    title: 'Character & animation',
-    description: 'Distinct, believable voices for games, animation and dubbing.',
-    points: ['Animation & games', 'Dubbing & ADR', 'Toys & interactive'],
+    title: 'Characters & performance',
+    description: 'Expressive voices for character-led formats without slipping into caricature.',
+    points: [
+      'Animation and dubbing',
+      'Audio drama and podcasts',
+      'Children’s stories and learning',
+    ],
   },
   {
-    title: 'E-learning & IVR',
-    description: 'Clear, consistent voices for training and phone systems.',
-    points: ['Training & modules', 'IVR & on-hold', 'Accessibility reads'],
+    title: 'Learning & IVR',
+    description: 'Steady, consistent delivery for information that needs to be understood.',
+    points: ['Training modules', 'Phone systems and on-hold', 'Accessibility reads'],
   },
 ]
 
@@ -123,13 +130,13 @@ export type Tone = { label: string; note: string }
 
 export const tones: Tone[] = [
   { label: 'Warm', note: 'Inviting and human' },
-  { label: 'Confident', note: 'Assured, never pushy' },
-  { label: 'Playful', note: 'Light and characterful' },
-  { label: 'Authoritative', note: 'Trusted and clear' },
+  { label: 'Clear', note: 'Easy to follow' },
+  { label: 'Conversational', note: 'Natural, unscripted feel' },
+  { label: 'Assured', note: 'Confident without push' },
   { label: 'Intimate', note: 'Close-mic storytelling' },
-  { label: 'Energetic', note: 'Upbeat and bright' },
+  { label: 'Bright', note: 'Light and present' },
   { label: 'Calm', note: 'Measured and soothing' },
-  { label: 'Conversational', note: 'Real, unscripted feel' },
+  { label: 'Characterful', note: 'Expressive and specific' },
 ]
 
 export const languages = [
@@ -143,24 +150,24 @@ export type Step = { title: string; description: string }
 
 export const workflow: Step[] = [
   {
-    title: 'Share your script',
+    title: 'Send the script',
     description:
-      'Send the copy, brand references and any pronunciation notes. I reply with availability and a fair, flat quote — no surprises.',
+      'Share copy, deadline, audience and pronunciation notes. You get availability and a clear quote before recording starts.',
   },
   {
-    title: 'Direct the read',
+    title: 'Shape the tone',
     description:
-      'Record solo, or join a live session via Source-Connect, Zoom or phone patch and direct me in real time from anywhere.',
+      'Choose a direction from references, or join a live-directed session and guide the read in real time.',
   },
   {
-    title: 'Record in a treated studio',
+    title: 'Record clean takes',
     description:
-      'Professional, acoustically treated home studio with a broadcast chain — clean, quiet, consistent takes every time.',
+      'Audio is captured in a treated home studio with a consistent recording chain and careful editing.',
   },
   {
-    title: 'Delivered fast, ready to use',
+    title: 'Receive ready files',
     description:
-      'Edited, mastered audio in your preferred format, typically within 24 hours. One round of revisions included.',
+      'Edited, mastered files are delivered in the format you need, with a straightforward revision round included.',
   },
 ]
 
@@ -169,27 +176,27 @@ export type Testimonial = { quote: string; author: string; role: string }
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'Stine nailed the tone on the first take and made our brand sound exactly how we imagined. Effortless to work with.',
+      'A warm, precise read that made the script feel personal. Direction was easy and the files arrived ready to place.',
     author: 'Creative Director',
     role: 'Advertising agency', // placeholder — swap for a named client with permission
   },
   {
     quote:
-      'Fast, professional and genuinely warm. The remote session felt like she was in the room with us.',
+      'Professional, fast and calm in session. The voice sat beautifully in the edit with almost no cleanup needed.',
     author: 'Producer',
     role: 'Podcast network',
   },
   {
     quote:
-      'Broadcast-quality audio delivered ahead of deadline. Our go-to voice for every new campaign.',
+      'Exactly the tone we needed: trustworthy, clear and never over-sold. A very smooth remote workflow.',
     author: 'Marketing Lead',
-    role: 'Consumer tech brand',
+    role: 'Consumer brand',
   },
 ]
 
 export const clientFit = [
-  'Agencies needing a reliable, fast turnaround voice',
-  'Studios and producers wanting broadcast-ready audio',
-  'Brands looking for a signature, ownable sound',
+  'Agencies needing a reliable voice for campaign work',
+  'Studios and producers who need clean remote recordings',
+  'Brands looking for a warmer, more human sound',
   'Authors and publishers casting long-form narration',
 ]
